@@ -13,14 +13,14 @@ function App() {
     }
   }, []);
   const loginHandler = (email, password) => {
-    // We should of course check email and password
-    // But it's just a dummy/ demo anyways
+    // We should of course check email and password 
     setIsLoggedIn(true);
     localStorage.setItem("logged_in", "1");
   };
 
   const logoutHandler = () => {
     setIsLoggedIn(false);
+    localStorage.removeItem('logged_in')
   };
 
   return (
